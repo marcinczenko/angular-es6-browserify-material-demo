@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <script src='public/index.js'></script>
+    <title>angular-es6-browserify-demo</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+    <!-- <link rel='stylesheet' href='http://rawgit.com/angular/bower-material/master/angular-material.css'> -->
+</head>
+<body ng-app="angular-es6-browserify-demo" ng-strict-di>
+    <div ng-controller="DemoController" layout="column" layout-fill>
+        <section layout="row" flex>
+            <md-content flex class="md-padding">
+                <div layout="column" layout-fill layout-align="center center">
+                    <div>
+                        <md-button ng-click="toggleLeft()" class="md-primary" >
+                            Toggle Side Navigation
+                        </md-button>
+                    </div>
+                </div>
+            </md-content>
+            <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+                <md-toolbar class="md-theme-light">
+                    <h1 class="md-toolbar-tools">Side Navigation Left</h1>
+                </md-toolbar>
+                <md-content ng-controller="LeftController" class="md-padding">
+                    <md-button ng-click="close()" class="md-primary">
+                        Close Side Navigation Left
+                    </md-button>
+                </md-content>
+            </md-sidenav>
+        </section>
+    </div>
+</body>
+</html>
